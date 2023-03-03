@@ -3,13 +3,13 @@ cost = 0.0
 for _ in range(tickets):
   age = int(input('Введите возраст посетителя конференции: '))
   if age < 18:
-      cost = cost + 0
+      cost += 0
       print('Билет бесплатный')
   elif 18 <= age < 25:
-      cost = cost + 990
+      cost += 990
   else:
-      cost = cost + 1390
+      cost += 1390
 if tickets > 3:
-      cost = cost * 0.9
-      print("Поздравляем, Вы получили скидку 10% за покупку более трёх билетов!")
-print('Итого:' + ' ' + str(round(cost)) + ' ' + 'рублей')
+      cost *= 0.9
+      print('Поздравляем, Вы получили скидку 10% за покупку более трёх билетов!')
+print(f'Итого: {str(round(cost))} рублей')
